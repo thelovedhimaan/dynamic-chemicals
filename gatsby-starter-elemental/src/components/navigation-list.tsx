@@ -44,8 +44,8 @@ const List: React.FC<NavigationListProps> = ({
             return (
                 <button
                     className={`text-color-2 transition-transform duration-200 transform top-0 left-0 ${
-                        i === currentTheme ?  "scale-0 absolute"
-                        :"scale-100"                    }`}
+                        i === currentTheme ? "scale-100" : "scale-0 absolute"
+                    }`}
                     title={`Switch to ${themes[next].label}`}
                     key={`${name}-theme-switch-btn-${item.name}`}
                     onClick={switchTheme}

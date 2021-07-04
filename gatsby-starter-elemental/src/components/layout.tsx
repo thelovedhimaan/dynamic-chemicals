@@ -48,7 +48,7 @@ export default ({ children, front, seo, navPlaceholder=true, location }: LayoutP
     const isDarkTheme = query.site.siteMetadata.darkmode;
     const cookiePolicyEnabled = query.site.siteMetadata.cookiePolicy;
 
-    const [theme, changeTheme] = useState(isDarkTheme ? 0 : 1);
+    const [theme, changeTheme] = useState(isDarkTheme ? 1 : 0);
     const [cookieShown, setCookieShown] = useState(false);
 
     useEffect(() => {

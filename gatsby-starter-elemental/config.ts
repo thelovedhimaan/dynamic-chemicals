@@ -1,5 +1,5 @@
 const siteMetadata = {
-    title: `Dynamic Chemicals`,
+    title: `Elemental`,
     siteUrl: `http://localhost`,
     capitalizeTitleOnHome: false,
     logo: `/images/logo.png`,
@@ -153,7 +153,7 @@ const contactFormSubmit = async (api, data) => {
 const defaults = {
     disqus: null,
     twoColumnWall: true,
-    darkmode: false,
+    darkmode: true,
     switchTheme: true,
     capitalizeTitleOnHome: true,
     cookiePolicy: false
