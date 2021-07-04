@@ -1,18 +1,18 @@
 const siteMetadata = {
-    title: `Elemental`,
+    title: `Dynamic Chemicals`,
     siteUrl: `http://localhost`,
     capitalizeTitleOnHome: false,
     logo: `/images/logo.png`,
-    icon: `/images/icon.png`,
-    titleImage: `/images/wall.png`,
-    ogImage: `/images/wall.png`,
+    icon: `/images/logo.png`,
+    titleImage: `/images/wall.jpg`,
+    ogImage: `/images/wall.jpg`,
     twoColumnWall: true,
     cookiePolicy: true,
-    introTag: `PHOTOGRAPHER | VIDEOGRAPHER`,
-    description: `Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed sit amet accumsan arcu. Proin ac consequat arcu.`,
+    introTag: `CHEMICAL PLANT`,
+    description: `Near bus stand Kalpi, Ambala, Haryana, India, 133104`,
     about:
-        "Cras accumsan a lectus at tincidunt. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Phasellus elementum dapibus dictum. Mauris auctor quam nec est tincidunt hendrerit. Donec pulvinar lobortis mauris. Cras vulputate ullamcorper ligula a rhoncus. Nunc venenatis elementum ligula in semper. Mauris malesuada purus nunc, et ultricies leo aliquam ac. Ut sit amet nunc id magna accumsan hendrerit in eget metus.",
-    author: `@_akzhy`,
+        "Deals with Industrial chemicals, Specialist in water treatment, Field regular user boiler chemical, D-scaling chemicals, Cooling tower water body, STP and fireside chemicals, Interlocking and floor tiles hardener &  All housekeeping cleaning chemicals and materials.",
+    author: `Love Dhimaan`,
     blogItemsPerPage: 10,
     portfolioItemsPerPage: 10,
     darkmode: true,
@@ -27,11 +27,11 @@ const siteMetadata = {
             url: "/about",
         },
         {
-            name: "BLOG",
+            name: "PRODUCTS",
             url: "/blog",
         },
         {
-            name: "PORTFOLIO",
+            name: "IMAGES",
             url: "/portfolio",
         },
         {
@@ -153,7 +153,7 @@ const contactFormSubmit = async (api, data) => {
 const defaults = {
     disqus: null,
     twoColumnWall: true,
-    darkmode: false,
+    darkmode: true,
     switchTheme: true,
     capitalizeTitleOnHome: true,
     cookiePolicy: false
