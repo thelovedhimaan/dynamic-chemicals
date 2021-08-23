@@ -2,7 +2,7 @@ import React from 'react';
 import styled from 'styled-components';
 import { StaticQuery, graphql } from 'gatsby';
 import Img from 'gatsby-image';
-
+import '../../css/App.css'
 import { Container } from '@components/global';
 import ExternalLink from '@common/ExternalLink';
 
@@ -26,22 +26,22 @@ const Header = () => (
       <HeaderWrapper>
         <Container>
           <Grid>
-            <Art>
+           
+            <Art >
               <Img fluid={data.art_build.childImageSharp.fluid} />
             </Art>
+          
             <Text>
-              <h1>
-                Fast in
-                <br />
-                every way
-                <br />
-                that matters
+              <h1 style={{color:'white'}}>
+              Near bus stand Kalpi
+             Ambala, Haryana 133104
               </h1>
               <br />
-              <p>
-                <StyledExternalLink href="https://github.com/ajayns/gatsby-absurd">
-                  Check out source &nbsp;&#x2794;
-                </StyledExternalLink>
+              <p style={{color:'white'}}>
+                <button className="offset">
+                <StyledExternalLink target="_blank" href="https://goo.gl/maps/SXRmMZxJ9KsZbf856">
+               Navigate through Google Maps &nbsp;&#x2794;
+                </StyledExternalLink></button>
               </p>
             </Text>
           </Grid>
@@ -65,9 +65,10 @@ const Art = styled.figure`
   margin: 0;
 
   > div {
-    width: 120%;
-    margin-bottom: -4.5%;
-
+    width: 100%;
+    margin-bottom: 7%;
+    border-radius:50%;
+    box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
     @media (max-width: ${props => props.theme.screen.md}) {
       width: 100%;
     }

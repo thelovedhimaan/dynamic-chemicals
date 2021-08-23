@@ -2,8 +2,7 @@ import React from 'react';
 import styled from 'styled-components';
 import { StaticQuery, graphql } from 'gatsby';
 import Img from 'gatsby-image';
-
-import { Container } from '@components/global';
+import { Section, Container } from '@components/global';
 import ExternalLink from '@common/ExternalLink';
 
 import GithubIcon from '@static/icons/github.svg';
@@ -25,7 +24,7 @@ const SOCIAL = [
   },
 ];
 
-const Footer = () => (
+const Contact = () => (
   <StaticQuery
     query={graphql`
       query {
@@ -42,7 +41,7 @@ const Footer = () => (
       }
     `}
     render={data => (
-      <React.Fragment>
+      <React.Fragment id='#contact'>
         <Art>
           <Img
             fluid={data.art_pot.childImageSharp.fluid}
@@ -50,24 +49,29 @@ const Footer = () => (
           />
         </Art>
         <FooterWrapper>
-          <StyledContainer>
-            <Copyright>
-              <h2>Absurd</h2>
+          <StyledContainer id='contact' >
+            <Copyright style={{color:'white'}}>
+              <h2 >Dynamic Chemicals</h2>
+              <p>  <a target="_blank" href='tel:+919034777453'>  <button className="offset" style={{height:'70px',width:'250px',textDecoration:'none', fontSize:'16px'}}> Contact : 9034777453
+              </button></a></p>
+              <p > <a target="_blank" href='https://api.whatsapp.com/send?phone=+919034777453&text=Hi%20There!'><button className="offset" style={{height:'70px',width:'250px',textDecoration:'none', fontSize:'16px'}}> WhatsApp : 9034777453
+              </button></a></p><span></span>
+              <span></span>
               <span>
-                Illustrations by
+                {/* Illustrations by
                 {` `}
                 <ExternalLink href="https://twitter.com/diana_valeanu">
                   @diana_valeanu
-                </ExternalLink>
+                </ExternalLink> */}
               </span>
             </Copyright>
-            <SocialIcons>
+            {/* <SocialIcons>
               {SOCIAL.map(({ icon, link }) => (
                 <ExternalLink key={link} href={link}>
                   <img src={icon} alt="link" />
                 </ExternalLink>
               ))}
-            </SocialIcons>
+            </SocialIcons> */}
           </StyledContainer>
         </FooterWrapper>
       </React.Fragment>
@@ -123,4 +127,4 @@ const StyledContainer = styled(Container)`
   }
 `;
 
-export default Footer;
+export default Contact;

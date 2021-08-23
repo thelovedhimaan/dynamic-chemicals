@@ -33,11 +33,11 @@ module.exports = {
     {
       resolve: `gatsby-plugin-manifest`,
       options: {
-        name: `Absurd`,
-        short_name: `absurd`,
+        name: `Dynamic Chemicals`,
+        short_name: `Dynamic Chemicals`,
         start_url: `/`,
-        background_color: `#8bd8ed`,
-        theme_color: `#8bd8ed`,
+        background_color: `#354EB4`,
+        theme_color: `#354EB4`,
         display: `minimal-ui`,
         icon: `static/favicon.svg`,
       },

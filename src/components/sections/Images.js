@@ -38,7 +38,7 @@ const TEAM = [
   },
 ];
 
-const Team = () => (
+const Images = () => (
   <StaticQuery
     query={graphql`
       query {
@@ -67,9 +67,9 @@ const Team = () => (
       }
     `}
     render={data => (
-      <Section id="team" accent="secondary">
+      <Section id="images" accent="secondary">
         <Container style={{ position: 'relative' }}>
-          <h1>The Team</h1>
+        <h2 style={{textAlign:'center',fontWeight:'800'}}>IMAGES</h2>
           <TeamGrid>
             {TEAM.map(({ name, image, role }) => {
               const img = data.allFile.edges.find(
@@ -92,6 +92,7 @@ const Team = () => (
             <Img fluid={data.art_team.childImageSharp.fluid} />
           </ArtMobile>
         </Container>
+     
       </Section>
     )}
   />
@@ -158,4 +159,4 @@ const Subtitle = styled.p`
   color: ${props => props.theme.color.black.light};
 `;
 
-export default Team;
+export default Images;

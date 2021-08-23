@@ -4,39 +4,52 @@ import { StaticQuery, graphql } from 'gatsby';
 import Img from 'gatsby-image';
 
 import { Section, Container } from '@components/global';
+import ExternalLink from '@common/ExternalLink';
 
-const About = () => (
+import { ReactComponent as AirbnbLogo } from '@images/logos/airbnb.svg';
+import { ReactComponent as AppleMusicLogo } from '@images/logos/apple-music.svg';
+import { ReactComponent as CokeLogo } from '@images/logos/coca-cola.svg';
+import { ReactComponent as NodeLogo } from '@images/logos/nodejs.svg';
+import { ReactComponent as NikeLogo } from '@images/logos/nike.svg';
+import { ReactComponent as InstagramLogo } from '@images/logos/instagram.svg';
+
+const LOGOS = [
+  {
+    logo: AirbnbLogo,
+    link: 'https://airbnb.io',
+  },
+  {
+    logo: AppleMusicLogo,
+    link: 'https://www.apple.com/in/music/',
+  },
+  {
+    logo: CokeLogo,
+    link: 'https://coca-cola.com',
+  },
+  {
+    logo: NodeLogo,
+    link: 'https://nodejs.org',
+  },
+  {
+    logo: NikeLogo,
+    link: 'https://nike.com',
+  },
+  {
+    logo: InstagramLogo,
+    link: 'https://instagram.com',
+  },
+];
+
+const UsedBy = () => (
   <StaticQuery
     query={graphql`
       query {
-        art_fast: file(
+        art_story: file(
           sourceInstanceName: { eq: "art" }
-          name: { eq: "fast" }
+          name: { eq: "tell_story" }
         ) {
           childImageSharp {
-            fluid(maxWidth: 760) {
-              ...GatsbyImageSharpFluid_withWebp_tracedSVG
-            }
-          }
-        }
-
-        art_learn: file(
-          sourceInstanceName: { eq: "art" }
-          name: { eq: "learn_yourself" }
-        ) {
-          childImageSharp {
-            fluid(maxWidth: 760) {
-              ...GatsbyImageSharpFluid_withWebp_tracedSVG
-            }
-          }
-        }
-
-        art_ideas: file(
-          sourceInstanceName: { eq: "art" }
-          name: { eq: "ideas" }
-        ) {
-          childImageSharp {
-            fluid(maxWidth: 760) {
+            fluid(maxWidth: 1200) {
               ...GatsbyImageSharpFluid_withWebp_tracedSVG
             }
           }
@@ -44,99 +57,77 @@ const About = () => (
       }
     `}
     render={data => (
-      <Section id="about">
-        <Container>
-          <Grid>
-            <div>
-              <h2>Speed past the competition</h2>
-              <p>
-                Gatsby.js builds the fastest possible website. Instead of
-                waiting to generate pages when requested, pre-build pages and
-                lift them into a global cloud of servers — ready to be delivered
-                instantly to your users wherever they are.
-              </p>
-            </div>
-            <Art>
-              <Img fluid={data.art_fast.childImageSharp.fluid} />
-            </Art>
-          </Grid>
-          <Grid inverse>
-            <Art>
-              <Img fluid={data.art_learn.childImageSharp.fluid} />
-            </Art>
-            <div>
-              <h2>Nothing new to learn here</h2>
-              <p>
-                Enjoy the power of the latest web technologies – React.js ,
-                Webpack , modern JavaScript and CSS and more — all set up and
-                waiting for you to start building.
-              </p>
-            </div>
-          </Grid>
-          <Grid>
-            <div>
-              <h2>Grow and build your ideas</h2>
-              <p>
-                Waste no more time on tooling and performance. Focus on the the
-                site you want to build and nothing more.
-                <br />
-                <br />
-                Gatsby is fast in every way that matters.
-              </p>
-            </div>
-            <Art>
-              <Img fluid={data.art_ideas.childImageSharp.fluid} />
-            </Art>
-          </Grid>
-        </Container>
+      <Section id="about" accent >
+ <h2 style={{textAlign:'center',fontWeight:'800', color:'white'}}>ABOUT</h2>
+        <StyledContainer>
+          
+          <div style={{color:'white'}}>
+            <br/>
+            <h3>We Deal with
+Industrial chemicals,
+Specialist in water treatment,
+Field regular user boiler chemical,
+D-scaling chemicals,
+Cooling tower water body,
+STP and fireside chemicals,
+Interlocking and floor tiles hardener &
+All housekeeping cleaning chemicals and materials.</h3>
+            <LogoGrid>
+              
+            </LogoGrid>
+          </div>
+          <Art >
+            {/* <Img  fluid={data.art_story.childImageSharp.fluid} /> */}
+          </Art>
+        </StyledContainer>
       </Section>
     )}
   />
 );
 
-const Grid = styled.div`
+const LogoGrid = styled.div`
   display: grid;
-  grid-template-columns: 3fr 2fr;
-  grid-gap: 40px;
-  text-align: right;
-  align-items: center;
+  grid-template-columns: 1fr 1fr;
+  grid-gap: 64px;
   justify-items: center;
-  margin: 24px 0;
+  margin-top: 96px;
 
-  ${props =>
-    props.inverse &&
-    `
-    text-align: left;
-    grid-template-columns: 2fr 3fr;
-  `}
-
-  h2 {
-    margin-bottom: 16px;
+  a {
+    svg {
+      width: 100%;
+    }
   }
 
-  @media (max-width: ${props => props.theme.screen.md}) {
+  @media (max-width: ${props => props.theme.screen.sm}) {
     grid-template-columns: 1fr;
-    text-align: left;
-    margin-bottom: 96px;
+  }
+`;
 
-    &:last-child {
-      margin-bottom: 24px;
-    }
+const StyledContainer = styled(Container)`
+  display: flex;
+  justify-content: flex-end;
+  position: relative;
 
-    ${props =>
-      props.inverse &&
-      `
-        ${Art} {
-          order: 2;
-        }
-    `}
+  @media (max-width: ${props => props.theme.screen.md}) {
+    justify-content: center;
   }
 `;
 
 const Art = styled.figure`
-  margin: 0;
-  max-width: 380px;
-  width: 100%;
+  width: 600px;
+  position: absolute;
+  top: -12%;
+  right: 50%;
+
+  @media (max-width: ${props => props.theme.screen.lg}) {
+    top: 0;
+    right: 65%;
+    width: 500px;
+  }
+
+  @media (max-width: ${props => props.theme.screen.md}) {
+    display: none;
+  }
 `;
 
-export default About;
+export default UsedBy;

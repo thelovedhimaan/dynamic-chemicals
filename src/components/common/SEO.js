@@ -2,8 +2,8 @@ import React from 'react';
 import Helmet from 'react-helmet';
 
 const SEO_DATA = {
-  description: 'An absurd gatsby starter',
-  title: 'Absurd',
+  description: 'Dynamic Chemicals',
+  title: 'Dynamic Chemicals',
   url: '',
   author: 'ajayns',
   keywords: ['gatsby', 'site', 'absurd'],

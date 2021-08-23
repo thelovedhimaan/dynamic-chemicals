@@ -15,7 +15,7 @@ import {
 
 import { ReactComponent as MenuIcon } from '@static/icons/menu.svg';
 
-const NAV_ITEMS = ['About', 'Brands', 'Team', 'FAQ'];
+const NAV_ITEMS = ['Products/Services', 'About', 'FAQ','Contact'];
 
 class Navbar extends Component {
   state = {
@@ -33,13 +33,13 @@ class Navbar extends Component {
   };
 
   getNavAnchorLink = item => (
-    <AnchorLink href={`#${item.toLowerCase()}`} onClick={this.closeMobileMenu}>
+    <AnchorLink style={{color:'white'}} href={`#${item.toLowerCase()}`} onClick={this.closeMobileMenu}>
       {item}
     </AnchorLink>
   );
 
   getNavList = ({ mobile = false }) => (
-    <NavListWrapper mobile={mobile}>
+    <NavListWrapper  mobile={mobile}>
       <Scrollspy
         items={NAV_ITEMS.map(item => item.toLowerCase())}
         currentClassName="active"
@@ -47,7 +47,7 @@ class Navbar extends Component {
         offset={-64}
       >
         {NAV_ITEMS.map(navItem => (
-          <NavItem key={navItem}>{this.getNavAnchorLink(navItem)}</NavItem>
+          <NavItem  style={{color:'white'}}key={navItem}>{this.getNavAnchorLink(navItem)}</NavItem>
         ))}
       </Scrollspy>
     </NavListWrapper>
@@ -59,19 +59,19 @@ class Navbar extends Component {
     return (
       <Nav {...this.props}>
         <StyledContainer>
-          <Brand>Absurd</Brand>
+          <Brand style={{color:'white'}}>Dynamic Chemicals</Brand>
           <Mobile>
-            <button onClick={this.toggleMobileMenu} style={{ color: 'black' }}>
+            <button onClick={this.toggleMobileMenu} style={{ color: 'white' }}>
               <MenuIcon />
             </button>
           </Mobile>
 
-          <Mobile hide>{this.getNavList({})}</Mobile>
+          <Mobile  hide >{this.getNavList({})}</Mobile>
         </StyledContainer>
         <Mobile>
           {mobileMenuOpen && (
             <MobileMenu>
-              <Container>{this.getNavList({ mobile: true })}</Container>
+              <Container >{this.getNavList({ mobile: true })}</Container>
             </MobileMenu>
           )}
         </Mobile>
