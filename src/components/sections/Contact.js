@@ -55,6 +55,7 @@ const Contact = () => (
               <br/>
               <p>  <a target="_blank" href='tel:+919034777453'>  <button className="offset" style={{height:'70px',width:'250px',textDecoration:'none', fontSize:'16px'}}>   <span style={{color:'white'}}>Contact : 9034777453</span>
               </button></a></p>
+              <br/>
               <p > <a target="_blank" href='https://api.whatsapp.com/send?phone=+919034777453&text=Hi%20There!'><button className="offset" style={{height:'70px',width:'250px',textDecoration:'none', fontSize:'16px'}}>  <span style={{color:'white'}}> WhatsApp : 9034777453</span>
               </button></a></p><span></span>
               <span></span>
