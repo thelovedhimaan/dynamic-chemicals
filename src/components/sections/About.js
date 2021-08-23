@@ -73,7 +73,7 @@ STP and fireside chemicals,
 Interlocking and floor tiles hardener &
 All housekeeping cleaning chemicals and materials.</h3>
 <p style={{color:'white', textAlign:'center', marginTop:'30px'}}>
-<StyledExternalLink  target="_blank" href={PDF}>  <button className="offset" >
+<StyledExternalLink  target="_blank" href={PDF}>  <button className="offset" style={{height:'80px',width:'85%',textDecoration:'none', fontSize:'20px'}} >
                 
               <span style={{color:'white'}}>Download PDF for more details &nbsp;&#x2794;</span>
                </button> </StyledExternalLink>

@@ -40,7 +40,7 @@ const Header = () => (
               <p >
               
                 <StyledExternalLink style={{color:'white'}} target="_blank" href="https://goo.gl/maps/SXRmMZxJ9KsZbf856">
-                <button className="offset">  <span style={{color:'white'}}>Navigate through Google Maps &nbsp;&#x2794;</span></button>
+                <button className="offset" style={{height:'80px',width:'85%',textDecoration:'none', fontSize:'20px'}}>  <span style={{color:'white'}}>Navigate through Google Maps &nbsp;&#x2794;</span></button>
                 </StyledExternalLink>
               </p>
             </Text>

@@ -186,8 +186,7 @@ const Grid = styled.div`
   align-items: center;
   justify-items: center;
   margin: 24px 0;
-  // border: 3px solid #354EB4;
-  border-radius: 5px;
+    border-radius: 5px;
   box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
   
   padding: 40px;
@@ -207,7 +206,7 @@ const Grid = styled.div`
     grid-template-columns: 1fr;
     text-align: left;
     margin-bottom: 96px;
-
+    padding: 20px;
     &:last-child {
       margin-bottom: 24px;
     }
