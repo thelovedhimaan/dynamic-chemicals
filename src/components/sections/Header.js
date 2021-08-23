@@ -37,11 +37,11 @@ const Header = () => (
              Ambala, Haryana 133104
               </h1>
               <br />
-              <p style={{color:'white'}}>
-                <button className="offset">
-                <StyledExternalLink target="_blank" href="https://goo.gl/maps/SXRmMZxJ9KsZbf856">
-               Navigate through Google Maps &nbsp;&#x2794;
-                </StyledExternalLink></button>
+              <p >
+              
+                <StyledExternalLink style={{color:'white'}} target="_blank" href="https://goo.gl/maps/SXRmMZxJ9KsZbf856">
+                <button className="offset">  <span style={{color:'white'}}>Navigate through Google Maps &nbsp;&#x2794;</span></button>
+                </StyledExternalLink>
               </p>
             </Text>
           </Grid>

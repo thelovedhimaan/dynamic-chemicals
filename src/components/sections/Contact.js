@@ -42,19 +42,19 @@ const Contact = () => (
     `}
     render={data => (
       <React.Fragment id='#contact'>
-        <Art>
+        {/* <Art>
           <Img
             fluid={data.art_pot.childImageSharp.fluid}
             style={{ width: 480, maxWidth: '100%', marginBottom: -16 }}
           />
-        </Art>
+        </Art> */}
         <FooterWrapper>
           <StyledContainer id='contact' >
             <Copyright style={{color:'white'}}>
               <h2 >Dynamic Chemicals</h2>
-              <p>  <a target="_blank" href='tel:+919034777453'>  <button className="offset" style={{height:'70px',width:'250px',textDecoration:'none', fontSize:'16px'}}> Contact : 9034777453
+              <p>  <a target="_blank" href='tel:+919034777453'>  <button className="offset" style={{height:'70px',width:'250px',textDecoration:'none', fontSize:'16px'}}>   <span style={{color:'white'}}>Contact : 9034777453</span>
               </button></a></p>
-              <p > <a target="_blank" href='https://api.whatsapp.com/send?phone=+919034777453&text=Hi%20There!'><button className="offset" style={{height:'70px',width:'250px',textDecoration:'none', fontSize:'16px'}}> WhatsApp : 9034777453
+              <p > <a target="_blank" href='https://api.whatsapp.com/send?phone=+919034777453&text=Hi%20There!'><button className="offset" style={{height:'70px',width:'250px',textDecoration:'none', fontSize:'16px'}}>  <span style={{color:'white'}}> WhatsApp : 9034777453</span>
               </button></a></p><span></span>
               <span></span>
               <span>

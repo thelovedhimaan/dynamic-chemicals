@@ -80,7 +80,11 @@
 button {
   color: var(--color);
   transition: 0.5s;
+  padding: 10px;
+
+  margin: 10px;
 }
+
 button:hover,
 button:focus {
   border-color: var(--hover);

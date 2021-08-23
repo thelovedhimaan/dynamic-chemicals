@@ -186,6 +186,11 @@ const Grid = styled.div`
   align-items: center;
   justify-items: center;
   margin: 24px 0;
+  // border: 3px solid #354EB4;
+  border-radius: 5px;
+  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+  
+  padding: 40px;
 
   ${props =>
     props.inverse &&

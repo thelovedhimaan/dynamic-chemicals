@@ -5,7 +5,7 @@ import Img from 'gatsby-image';
 
 import { Section, Container } from '@components/global';
 import ExternalLink from '@common/ExternalLink';
-
+import PDF from '../../CATALOG.pdf'
 import { ReactComponent as AirbnbLogo } from '@images/logos/airbnb.svg';
 import { ReactComponent as AppleMusicLogo } from '@images/logos/apple-music.svg';
 import { ReactComponent as CokeLogo } from '@images/logos/coca-cola.svg';
@@ -72,14 +72,21 @@ Cooling tower water body,
 STP and fireside chemicals,
 Interlocking and floor tiles hardener &
 All housekeeping cleaning chemicals and materials.</h3>
-            <LogoGrid>
-              
-            </LogoGrid>
+<p style={{color:'white', textAlign:'center', marginTop:'30px'}}>
+<StyledExternalLink  target="_blank" href={PDF}>  <button className="offset" >
+                
+              <span style={{color:'white'}}>Download PDF for more details &nbsp;&#x2794;</span>
+               </button> </StyledExternalLink>
+              </p>
           </div>
+         
           <Art >
+            
             {/* <Img  fluid={data.art_story.childImageSharp.fluid} /> */}
           </Art>
+          
         </StyledContainer>
+        
       </Section>
     )}
   />
@@ -102,7 +109,14 @@ const LogoGrid = styled.div`
     grid-template-columns: 1fr;
   }
 `;
+const StyledExternalLink = styled(ExternalLink)`
+  color: inherit;
+  text-decoration: none;
 
+  &:hover {
+    color: ${props => props.theme.color.black.regular};
+  }
+  `;
 const StyledContainer = styled(Container)`
   display: flex;
   justify-content: flex-end;
