@@ -1,79 +1,65 @@
+const path = require('path');
+
 module.exports = {
-  siteMetadata: {
-    title: `Gatsby Starter MoonClerk`,
-    description: `A Gatsby starter for creating SaaS landing pages using MoonClerk to accept payments.`,
-    author: `@moonclerk`,
-  },
   plugins: [
     `gatsby-plugin-react-helmet`,
-
-    `gatsby-transformer-sharp`,
-    `gatsby-plugin-sharp`,
+    {
+      resolve: `gatsby-plugin-svgr`,
+      options: {
+        svgoConfig: {
+          plugins: {
+            removeViewBox: false,
+          },
+        },
+      },
+    },
     `gatsby-plugin-styled-components`,
     {
-      resolve: "gatsby-plugin-react-svg",
+      resolve: `gatsby-source-filesystem`,
       options: {
-        rule: {
-          include: /assets/,
-        },
-      },
-    },
-    {
-      resolve: `gatsby-plugin-typography`,
-      options: {
-        pathToConfigModule: `src/utils/typography`,
-      },
-    },
-    {
-      resolve: "gatsby-plugin-module-resolver",
-      options: {
-        root: "./src",
-        aliases: {
-          "@assets": "./assets",
-          "@atoms": "./components/atoms",
-          "@molecules": "./components/molecules",
-          "@organisms": "./components/organisms",
-          "@utils": "./utils",
-        },
-      },
-    },
-    {
-      resolve: `gatsby-plugin-manifest`,
-      options: {
-        name: `gatsby-starter-default`,
-        short_name: `starter`,
-        start_url: `/`,
-        background_color: `#663399`,
-        theme_color: `#663399`,
-        display: `minimal-ui`,
-        icon: `src/assets/favicon.png`, // This path is relative to the root of the site.
+        name: `team`,
+        path: `${__dirname}/src/images/team`,
       },
     },
     {
       resolve: `gatsby-source-filesystem`,
       options: {
-        name: `images`,
-        path: `${__dirname}/src/assets`,
+        name: `art`,
+        path: `${__dirname}/src/images/art`,
+      },
+    },
+    `gatsby-transformer-sharp`,
+    `gatsby-plugin-sharp`,
+    {
+      resolve: `gatsby-plugin-manifest`,
+      options: {
+        name: `Absurd`,
+        short_name: `absurd`,
+        start_url: `/`,
+        background_color: `#8bd8ed`,
+        theme_color: `#8bd8ed`,
+        display: `minimal-ui`,
+        icon: `static/favicon.svg`,
       },
     },
     {
-      resolve: `gatsby-plugin-google-analytics`,
+      resolve: `gatsby-plugin-google-fonts`,
       options: {
-        // The property ID; the tracking code won't be generated without it
-        trackingId: "UA-32778170-8",
-        // Defines where to place the tracking script - `true` in the head and `false` in the body
-        head: false,
-        // Setting this parameter is optional
-        anonymize: true,
-        // Setting this parameter is also optional
-        respectDNT: true,
-        // Avoids sending pageview hits from custom paths
-        exclude: ["/preview/**", "/do-not-track/me/too/"],
-        // Delays sending pageview hits on route update (in milliseconds)
-        pageTransitionDelay: 0,
-        // Defers execution of google analytics script after page load
-        defer: false,
+        fonts: [`average`, `prata\:400,700`],
+      },
+    },
+    {
+      resolve: `gatsby-plugin-alias-imports`,
+      options: {
+        alias: {
+          '@components': path.resolve(__dirname, 'src/components'),
+          '@common': path.resolve(__dirname, 'src/components/common'),
+          '@images': path.resolve(__dirname, 'src/images'),
+          '@sections': path.resolve(__dirname, 'src/components/sections'),
+          '@styles': path.resolve(__dirname, 'src/styles/'),
+          '@static': path.resolve(__dirname, 'static/'),
+        },
       },
     },
   ],
-}
+};
