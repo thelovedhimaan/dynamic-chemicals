@@ -109,10 +109,10 @@ const Products = () => (
             </div>
             <div>
               In the above discussed paragraph, we have fully described the
-              different the different types of chemicals produced by Dynamic
-              Chemicals in which we have deeply described the uses and purpose
-              of the given product. And there are different types of cleaners
-              for multiple users.
+              different types of chemicals produced by Dynamic Chemicals in
+              which we have deeply described the uses and purpose of the given
+              product. And there are different types of cleaners for multiple
+              users.
             </div>
             {/* <Art>
               <Img
@@ -218,7 +218,7 @@ const FAQS = [
       <>
         The chemical is specially developed for cleaning and sanitizing, of
         Bathrooms which is very helpful in gremoving existing stain on sinks,
-        tub files and floor cleanings The scented products do not contain any
+        tub tiles and floor cleanings The scented products do not contain any
         abrasive or bleach. It is safe for bathroom fittings , marbles and
         granites.
       </>
@@ -260,7 +260,7 @@ const FAQS = [
     title: ' D5 / Air fresher ',
     content: () => (
       <>
-        Au fresher is the requirement of each office and Dynamic produces all
+        Air fresher is the requirement of each office and Dynamic produces all
         types of liquid for the completion of one's need. The freshener provides
         a soothing smell that lasts for a long duration. It features a
         delightful floral perfume that rides off bad odor and refreshes the
@@ -272,7 +272,7 @@ const FAQS = [
     title: ' D6/ Toilet bowl Cleaner',
     content: () => (
       <>
-        Dynamie is also producing toilet bowl cleaner which is very hard and
+        Dynamic is also producing toilet bowl cleaner which is very hard and
         helps in removing the limescale build-up. Squeeze bottle helps in the
         fast and easy application of this toilet cleaner on the dark stains on
         toilet rims . And the shape of the bottle is as good as it can pour
