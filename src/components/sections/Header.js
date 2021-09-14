@@ -2,7 +2,7 @@ import React from 'react';
 import styled from 'styled-components';
 import { StaticQuery, graphql } from 'gatsby';
 import Img from 'gatsby-image';
-import '../../css/App.css'
+import '../../css/App.css';
 import { Container } from '@components/global';
 import ExternalLink from '@common/ExternalLink';
 
@@ -23,25 +23,46 @@ const Header = () => (
       }
     `}
     render={data => (
-      <HeaderWrapper id='home'>
+      <HeaderWrapper id="home">
         <Container>
           <Grid>
-           
-            <Art >
+            <Art>
               <Img fluid={data.art_build.childImageSharp.fluid} />
             </Art>
-          
+
             <Text>
-              <h1 style={{color:'white'}}>
-              Near bus stand Kalpi
-             Ambala, Haryana 133104
+              <h1 style={{ color: 'white' }}>Dynamic Chemicals</h1>
+              <br />
+              <h1 className="text" style={{ color: 'white' }}>
+                Deal with Industrial chemicals, Specialist in water treatment,
+                Field regular user boiler chemical, D-scaling chemicals, Cooling
+                tower water body, STP and fireside chemicals, Interlocking and
+                floor tiles hardener & All housekeeping cleaning chemicals and
+                materials.
               </h1>
               <br />
-              <p >
-              
-                <StyledExternalLink style={{color:'white'}} target="_blank" href="https://goo.gl/maps/SXRmMZxJ9KsZbf856">
-                <button className="offset" style={{height:'80px',width:'85%',textDecoration:'none', fontSize:'18px', padding:'15px'}}>  <span style={{color:'white'}}>Navigate through Google Maps &nbsp;&#x2794;</span></button>
-                </StyledExternalLink>
+              <p>
+                {/* <StyledExternalLink
+                  style={{ color: 'white' }}
+                  target="_blank"
+                  href="https://goo.gl/maps/SXRmMZxJ9KsZbf856"
+                >
+                  <button
+                    className="offset"
+                    style={{
+                      height: '80px',
+                      width: '85%',
+                      textDecoration: 'none',
+                      fontSize: '18px',
+                      padding: '15px',
+                    }}
+                  >
+                    {' '}
+                    <span style={{ color: 'white' }}>
+                      Navigate through Google Maps &nbsp;&#x2794;
+                    </span>
+                  </button>
+                </StyledExternalLink> */}
               </p>
             </Text>
           </Grid>
@@ -61,14 +82,16 @@ const HeaderWrapper = styled.header`
 `;
 
 const Art = styled.figure`
-  width: 100%;
+  width: 90%;
   margin: 0;
 
   > div {
     width: 100%;
     margin-bottom: 7%;
-    border-radius:50%;
-    box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
+    border-radius: 50%;
+    box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px,
+      rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px,
+      rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
     @media (max-width: ${props => props.theme.screen.md}) {
       width: 100%;
     }

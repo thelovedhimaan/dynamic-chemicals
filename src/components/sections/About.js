@@ -5,7 +5,7 @@ import Img from 'gatsby-image';
 
 import { Section, Container } from '@components/global';
 import ExternalLink from '@common/ExternalLink';
-import PDF from '../../CATALOG.pdf'
+import PDF from '../../CATALOG.pdf';
 import { ReactComponent as AirbnbLogo } from '@images/logos/airbnb.svg';
 import { ReactComponent as AppleMusicLogo } from '@images/logos/apple-music.svg';
 import { ReactComponent as CokeLogo } from '@images/logos/coca-cola.svg';
@@ -57,36 +57,49 @@ const UsedBy = () => (
       }
     `}
     render={data => (
-      <Section id="about" accent >
- <h2 style={{textAlign:'center',fontWeight:'800', color:'white'}}>ABOUT</h2>
+      <Section id="about" accent>
+        <h2 style={{ textAlign: 'center', fontWeight: '800', color: 'white' }}>
+          ABOUT
+        </h2>
         <StyledContainer>
-          
-          <div style={{color:'white'}}>
-            <br/>
-            <h3>We Deal with
-Industrial chemicals,
-Specialist in water treatment,
-Field regular user boiler chemical,
-D-scaling chemicals,
-Cooling tower water body,
-STP and fireside chemicals,
-Interlocking and floor tiles hardener &
-All housekeeping cleaning chemicals and materials.</h3>
-<p style={{color:'white', textAlign:'center', marginTop:'30px'}}>
-<StyledExternalLink  target="_blank" href={PDF}>  <button className="offset" style={{height:'80px',width:'85%',textDecoration:'none', fontSize:'18px', padding:'15px'}} >
-                
-              <span style={{color:'white'}}>Download PDF for more details &nbsp;&#x2794;</span>
-               </button> </StyledExternalLink>
-              </p>
+          <div style={{ color: 'white' }}>
+            <br />
+            <h3>
+              We Deal with Industrial chemicals, Specialist in water treatment,
+              Field regular user boiler chemical, D-scaling chemicals, Cooling
+              tower water body, STP and fireside chemicals, Interlocking and
+              floor tiles hardener & All housekeeping cleaning chemicals and
+              materials.
+            </h3>
+            <br />
+            105 Green Park, Mahesh Nagar, Ambala Cantt. (HR) 133001
+            <p
+              style={{ color: 'white', textAlign: 'center', marginTop: '30px' }}
+            >
+              <StyledExternalLink target="_blank" href={PDF}>
+                {' '}
+                <button
+                  className="offset"
+                  style={{
+                    height: '80px',
+                    width: '85%',
+                    textDecoration: 'none',
+                    fontSize: '18px',
+                    padding: '15px',
+                  }}
+                >
+                  <span style={{ color: 'white' }}>
+                    Download PDF for more details &nbsp;&#x2794;
+                  </span>
+                </button>{' '}
+              </StyledExternalLink>
+            </p>
           </div>
-         
-          <Art >
-            
+
+          <Art>
             {/* <Img  fluid={data.art_story.childImageSharp.fluid} /> */}
           </Art>
-          
         </StyledContainer>
-        
       </Section>
     )}
   />
@@ -116,7 +129,7 @@ const StyledExternalLink = styled(ExternalLink)`
   &:hover {
     color: ${props => props.theme.color.black.regular};
   }
-  `;
+`;
 const StyledContainer = styled(Container)`
   display: flex;
   justify-content: flex-end;

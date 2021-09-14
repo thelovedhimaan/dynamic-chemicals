@@ -41,39 +41,108 @@ const Contact = () => (
       }
     `}
     render={data => (
-      <React.Fragment id='#contact'>
+      <React.Fragment id="#contact">
         {/* <Art>
           <Img
             fluid={data.art_pot.childImageSharp.fluid}
             style={{ width: 480, maxWidth: '100%', marginBottom: -16 }}
           />
         </Art> */}
-        <FooterWrapper>
-          <StyledContainer id='contact' >
-            <Copyright style={{color:'white'}}>
-              <h2 style={{fontSize:'30px'}} >Dynamic Chemicals</h2>
-              <br/>
-              <p>  <a target="_blank" href='tel:+919034777453'>  <button className="offset" style={{height:'70px',width:'250px',textDecoration:'none', fontSize:'16px'}}>   <span style={{color:'white'}}>Contact : 9034777453</span>
-              </button></a></p>
-              <br/>
-              <p > <a target="_blank" href='https://api.whatsapp.com/send?phone=+919034777453&text='><button className="offset" style={{height:'70px',width:'250px',textDecoration:'none', fontSize:'16px'}}>  <span style={{color:'white'}}> WhatsApp : 9034777453</span>
-              </button></a></p><span></span>
-              <span></span>
-              <span>
-                {/* Illustrations by
-                {` `}
-                <ExternalLink href="https://twitter.com/diana_valeanu">
-                  @diana_valeanu
-                </ExternalLink> */}
-              </span>
+        <FooterWrapper id="contact">
+          <h2
+            style={{ textAlign: 'center', fontWeight: '800', color: 'white' }}
+          >
+            CONTACT
+          </h2>
+          <br />
+          <br />
+          <StyledContainer>
+            <Copyright style={{ color: 'white' }}>
+              <h2 style={{ fontSize: '30px' }}>Dynamic Chemicals</h2>
+              <br />
+              <br />
+
+              <div>
+                FEEL FREE TO CONTACT ON ANY OF THE FOLLOWING PLATFROMS :{' '}
+              </div>
+              <br />
+
+              <div className="Cards">
+                <p>
+                  {' '}
+                  <a target="_blank" href="tel:+919996777453">
+                    {' '}
+                    <button
+                      className="offset"
+                      style={{
+                        height: '70px',
+                        width: '300px',
+                        textDecoration: 'none',
+                        fontSize: '16px',
+                      }}
+                    >
+                      {' '}
+                      <span style={{ color: 'white' }}>
+                        Contact : 9996777453
+                      </span>
+                    </button>
+                  </a>
+                </p>
+                <p>
+                  {' '}
+                  <a
+                    target="_blank"
+                    href="https://api.whatsapp.com/send?phone=+919996777453&text="
+                  >
+                    <button
+                      className="offset"
+                      style={{
+                        height: '70px',
+                        width: '300px',
+                        textDecoration: 'none',
+                        fontSize: '16px',
+                      }}
+                    >
+                      {' '}
+                      <span style={{ color: 'white' }}>
+                        {' '}
+                        WhatsApp : 9996777453
+                      </span>
+                    </button>
+                  </a>
+                </p>
+                <p>
+                  {' '}
+                  <a
+                    target="_blank"
+                    href="mailto:thedynamicchemicals@gmail.com"
+                  >
+                    <button
+                      className="offset"
+                      style={{
+                        height: '70px',
+                        width: '300px',
+                        textDecoration: 'none',
+                        fontSize: '16px',
+                      }}
+                    >
+                      {' '}
+                      <span style={{ color: 'white' }}>
+                        {' '}
+                        thedynamicchemicals@gmail.com
+                      </span>
+                    </button>
+                  </a>
+                </p>
+              </div>
             </Copyright>
-            {/* <SocialIcons>
-              {SOCIAL.map(({ icon, link }) => (
+            <SocialIcons>
+              {/* {SOCIAL.map(({ icon, link }) => (
                 <ExternalLink key={link} href={link}>
                   <img src={icon} alt="link" />
                 </ExternalLink>
-              ))}
-            </SocialIcons> */}
+              ))} */}
+            </SocialIcons>
           </StyledContainer>
         </FooterWrapper>
       </React.Fragment>
