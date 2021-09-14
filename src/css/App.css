@@ -158,12 +158,19 @@ button {
 .cardDur {
   font-size: 10px;
 }
+.cardImg {
+  width: 100px;
+  height: 160px;
+  border-radius: 10px;
+  box-shadow: 0 3px 6px rgba(0, 0, 0, 0.8);
+}
 .cardCur {
   font-size: 40px;
 }
 .cardTitle {
   /* color: white; */
   font-weight: 900;
+  /* height: 70px; */
   font-size: 24px;
   margin-top: 10px;
   text-align: left;

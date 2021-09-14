@@ -5,7 +5,16 @@ import Img from 'gatsby-image';
 
 import Card from '../common/FaqItem/Card';
 import { Section, Container } from '@components/global';
-
+import D1 from '../../images/art/D1.png';
+import D2 from '../../images/art/D2.png';
+import D3 from '../../images/art/D3.png';
+import D4 from '../../images/art/D4.png';
+import D5 from '../../images/art/D5.png';
+import D6 from '../../images/art/D6.png';
+import D7 from '../../images/art/D7.png';
+import D8 from '../../images/art/D8.png';
+import D9 from '../../images/art/D9.png';
+import D10 from '../../images/art/D10.png';
 const Products = () => (
   <StaticQuery
     query={graphql`
@@ -99,8 +108,8 @@ const Products = () => (
               <br />
               <p>
                 <div className="Cards">
-                  {FAQS.map(({ title, content }) => (
-                    <Card title={title} key={title}>
+                  {FAQS.map(({ title, content, image }) => (
+                    <Card title={title} key={title} image={image}>
                       {content()}
                     </Card>
                   ))}
@@ -214,6 +223,7 @@ const Products = () => (
 const FAQS = [
   {
     title: 'D1/ Bathroom Cleanses',
+    image: D1,
     content: () => (
       <>
         The chemical is specially developed for cleaning and sanitizing, of
@@ -226,6 +236,7 @@ const FAQS = [
   },
   {
     title: 'D2/ All Purpose Cleaner ',
+    image: D2,
     content: () => (
       <>
         This is a one man army for all types of stains as it acn be used for
@@ -237,6 +248,7 @@ const FAQS = [
   },
   {
     title: 'D3/ Glass Cleaner',
+    image: D3,
     content: () => (
       <>
         This is one of the the best glass cleaners that helps in cleaning glass
@@ -247,6 +259,7 @@ const FAQS = [
   },
   {
     title: 'D4 / Furniture cleaner',
+    image: D4,
     content: () => (
       <>
         Furniture cleaner is the basic requirement for any office for cleaning
@@ -258,6 +271,7 @@ const FAQS = [
   },
   {
     title: ' D5 / Air fresher ',
+    image: D5,
     content: () => (
       <>
         Air fresher is the requirement of each office and Dynamic produces all
@@ -270,6 +284,7 @@ const FAQS = [
   },
   {
     title: ' D6/ Toilet bowl Cleaner',
+    image: D6,
     content: () => (
       <>
         Dynamic is also producing toilet bowl cleaner which is very hard and
@@ -283,6 +298,7 @@ const FAQS = [
 
   {
     title: 'D7/ Floor Cleaner concentrated',
+    image: D7,
     content: () => (
       <>
         The D7 floor cleaner concentrate is very useful for cleaning the
@@ -294,6 +310,7 @@ const FAQS = [
   },
   {
     title: 'D8/ Kettle Descaler ',
+    image: D8,
     content: () => (
       <>
         This is one of the best cleaners that are very much helpful in cleaning
@@ -307,6 +324,7 @@ const FAQS = [
 
   {
     title: 'D9/ Removal of hard stains from bathroom walls and fittings',
+    image: D9,
     content: () => (
       <>
         This is the only chemical that can remove stains of water from bathroom

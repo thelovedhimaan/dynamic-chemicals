@@ -7,7 +7,7 @@ const Card = ({ title, children, image }) => {
         <div className="cardTitle">{title}</div>
       </div>
       <div className="bottomSection">
-        <img className="animeImg" src={image}></img>
+        <img className="cardImg" src={image}></img>
         <div className="cardDetails">{children}</div>
       </div>
     </div>

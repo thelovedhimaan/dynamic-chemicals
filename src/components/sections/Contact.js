@@ -68,7 +68,7 @@ const Contact = () => (
               <br />
 
               <div className="Cards">
-                <p>
+                <p style={{ margin: '20px' }}>
                   {' '}
                   <a target="_blank" href="tel:+919996777453">
                     {' '}
@@ -88,7 +88,7 @@ const Contact = () => (
                     </button>
                   </a>
                 </p>
-                <p>
+                <p style={{ margin: '20px' }}>
                   {' '}
                   <a
                     target="_blank"
@@ -111,7 +111,7 @@ const Contact = () => (
                     </button>
                   </a>
                 </p>
-                <p>
+                <p style={{ margin: '20px' }}>
                   {' '}
                   <a
                     target="_blank"
