@@ -1,37 +1,58 @@
-# gatsby-absurd
+# Dynamic Chemicals Website
 
-An absurd Gatsby starter. The collection of illustrations, [absurd.design](https://absurd.design/) by [Diana Valeanu](https://twitter.com/diana_valeanu) is a very fascinating and beautiful project with some pretty thoughtful concepts. Experimentation on how that could be put together on a site ended up as this starter.
+A product and lead-generation website built for a chemicals business covering
+housekeeping products, industrial water treatment, construction chemicals, and
+ion-exchange solutions.
 
-![screenshot](https://user-images.githubusercontent.com/20743219/85018804-64ec4e00-b18b-11ea-9aa0-d4be033efff8.png)
+> **Status:** legacy Gatsby application scheduled for modernization. The
+> current repository is not yet recommended for production deployment. See
+> [ROADMAP.md](./ROADMAP.md).
 
-[Live Demo](https://gatsby-absurd.vercel.app/)
+## Existing functionality
 
-## Installation
+- Responsive company landing page
+- Product catalog covering D1-D9 cleaning products
+- Industrial, water-treatment, construction, and resin service sections
+- Downloadable product catalog
+- Phone, WhatsApp, and email contact actions
+- Gatsby image optimization and SEO component
 
-Install the dependencies:
+## Why modernize it
 
-### `yarn install`
+This is a real business use case rather than an isolated UI exercise. A careful
+rebuild can demonstrate product discovery, content architecture, local SEO,
+lead conversion, performance, accessibility, and maintainable content
+operations.
 
-Run the development server:
+The current application began from the `gatsby-absurd` starter and still
+contains legacy dependencies and starter-era content. Modernization must remove
+that residue, confirm all business information with the owner, and establish
+clear content ownership before the site is presented as finished work.
 
-### `yarn dev`
+## Current stack
 
-Production build to `/public`:
+- Gatsby 2
+- React 16
+- Styled Components
+- Gatsby Image and GraphQL
 
-### `yarn build`
+## Legacy setup
 
-Cleanup cache (often fixes misc errors when run before `yarn dev`):
+```bash
+npm install
+npm run dev
+```
 
-### `yarn clean`
+## Modernization outcomes
 
-## Content
+- Clear product taxonomy and searchable product catalog
+- Trust-building company, quality, safety, and application content
+- Structured product data and downloadable technical documents
+- Accessible, responsive, high-performance user experience
+- Reliable inquiry forms with validation, spam protection, and analytics
+- Local SEO, structured metadata, sitemap, and social previews
+- Content editing workflow that does not require source-code changes
+- Tests, CI, preview deployments, monitoring, and operating documentation
 
-Each of the sections in the site are placed in `src/sections`. Data is usually separated out into objects/arrays to be rendered in the component.
-
-## SEO
-
-The component `src/components/common/SEO.js` handles all meta data and SEO content, modify the `SEO_DATA` variable to add the data automatically. For application manifest data and favicon, modify the `gatsby-plugin-manifest` configuration in `gatsby-config.js`.
-
-## Styling
-
-This project uses [styled-components]() to handle styling: `src/styles/theme.js` defines the styling base and `src/styles/GlobalStyles.js` includes basic element styles along with the CSS Reset.
+No modernization code will begin until the content, ownership, stack, hosting,
+and deployment approach are agreed.
