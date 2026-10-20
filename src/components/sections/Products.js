@@ -84,7 +84,7 @@ const Products = () => (
       }
     `}
     render={data => (
-      <Section id="products/services">
+      <Section id="products">
         <h2 style={{ textAlign: 'center', fontWeight: '800', width: '95%' }}>
           PRODUCTS / SERVICES
         </h2>

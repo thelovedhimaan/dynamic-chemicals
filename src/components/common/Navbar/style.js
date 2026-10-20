@@ -65,6 +65,7 @@ export const MobileMenu = styled.div`
 export const Brand = styled.div`
   font-family: ${props => props.theme.font.primary};
   ${props => props.theme.font_size.large};
+  color: white;
 `;
 
 export const Mobile = styled.div`

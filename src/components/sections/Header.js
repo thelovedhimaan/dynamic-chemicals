@@ -2,9 +2,9 @@ import React from 'react';
 import styled from 'styled-components';
 import { StaticQuery, graphql } from 'gatsby';
 import Img from 'gatsby-image';
-import '../../css/App.css';
+import AnchorLink from 'react-anchor-link-smooth-scroll';
+
 import { Container } from '@components/global';
-import ExternalLink from '@common/ExternalLink';
 
 const Header = () => (
   <StaticQuery
@@ -27,43 +27,23 @@ const Header = () => (
         <Container>
           <Grid>
             <Art>
-              <Img fluid={data.art_build.childImageSharp.fluid} />
+              <Img
+                alt="Dynamic Chemicals product range"
+                fluid={data.art_build.childImageSharp.fluid}
+              />
             </Art>
-
             <Text>
-              <h1 style={{ color: 'white' }}>Dynamic Chemicals</h1>
-              <br />
-              <h1 className="text" style={{ color: 'white' }}>
-                Deal with Industrial chemicals, Specialist in water treatment,
-                Field regular user boiler chemical, D-scaling chemicals, Cooling
-                tower water body, STP and fireside chemicals, Interlocking and
-                floor tiles hardener & All housekeeping cleaning chemicals and
-                materials.
-              </h1>
-              <br />
-              <p>
-                {/* <StyledExternalLink
-                  style={{ color: 'white' }}
-                  target="_blank"
-                  href="https://goo.gl/maps/SXRmMZxJ9KsZbf856"
-                >
-                  <button
-                    className="offset"
-                    style={{
-                      height: '80px',
-                      width: '85%',
-                      textDecoration: 'none',
-                      fontSize: '18px',
-                      padding: '15px',
-                    }}
-                  >
-                    {' '}
-                    <span style={{ color: 'white' }}>
-                      Navigate through Google Maps &nbsp;&#x2794;
-                    </span>
-                  </button>
-                </StyledExternalLink> */}
-              </p>
+              <Eyebrow>Industrial and commercial chemical solutions</Eyebrow>
+              <h1>Dynamic Chemicals</h1>
+              <Lead>
+                Products for water treatment, boiler and cooling-tower care,
+                descaling, housekeeping, construction, and routine industrial
+                maintenance.
+              </Lead>
+              <Actions>
+                <PrimaryLink href="#products">Explore products</PrimaryLink>
+                <SecondaryLink href="#contact">Contact us</SecondaryLink>
+              </Actions>
             </Text>
           </Grid>
         </Container>
@@ -74,10 +54,10 @@ const Header = () => (
 
 const HeaderWrapper = styled.header`
   background-color: ${props => props.theme.color.primary};
-  padding-top: 96px;
+  padding: 120px 0 72px;
 
   @media (max-width: ${props => props.theme.screen.md}) {
-    padding-top: 128px;
+    padding: 120px 0 56px;
   }
 `;
 
@@ -87,26 +67,20 @@ const Art = styled.figure`
 
   > div {
     width: 100%;
-    margin-bottom: 7%;
-    border-radius: 50%;
-    box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px,
-      rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px,
-      rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
-    @media (max-width: ${props => props.theme.screen.md}) {
-      width: 100%;
-    }
+    border-radius: 32px;
+    box-shadow: rgba(0, 0, 0, 0.22) 0 24px 48px;
   }
 `;
 
 const Grid = styled.div`
   display: grid;
-  grid-template-columns: 1fr 1fr;
+  grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
   align-items: center;
   grid-gap: 64px;
 
   @media (max-width: ${props => props.theme.screen.md}) {
     grid-template-columns: 1fr;
-    grid-gap: 80px;
+    grid-gap: 48px;
 
     > ${Art} {
       order: 2;
@@ -115,20 +89,50 @@ const Grid = styled.div`
 `;
 
 const Text = styled.div`
-  justify-self: center;
+  color: white;
 
-  @media (max-width: ${props => props.theme.screen.md}) {
-    justify-self: start;
+  h1 {
+    color: white;
+    font-size: clamp(2.6rem, 6vw, 4.5rem);
+    line-height: 1.05;
+    margin: 12px 0 24px;
   }
 `;
 
-const StyledExternalLink = styled(ExternalLink)`
-  color: inherit;
-  text-decoration: none;
+const Eyebrow = styled.p`
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  margin: 0;
+  text-transform: uppercase;
+`;
 
-  &:hover {
-    color: ${props => props.theme.color.black.regular};
-  }
+const Lead = styled.p`
+  color: white;
+  font-size: 1.2rem;
+  line-height: 1.7;
+  max-width: 620px;
+`;
+
+const Actions = styled.div`
+  display: flex;
+  flex-wrap: wrap;
+  gap: 16px;
+  margin-top: 32px;
+`;
+
+const PrimaryLink = styled(AnchorLink)`
+  background: white;
+  border: 2px solid white;
+  border-radius: 8px;
+  color: ${props => props.theme.color.primary};
+  font-weight: 700;
+  padding: 12px 20px;
+  text-decoration: none;
+`;
+
+const SecondaryLink = styled(PrimaryLink)`
+  background: transparent;
+  color: white;
 `;
 
 export default Header;

@@ -15,7 +15,13 @@ import {
 
 import { ReactComponent as MenuIcon } from '@static/icons/menu.svg';
 
-const NAV_ITEMS = ['Home','Products/Services', 'About', 'FAQ','Contact'];
+const NAV_ITEMS = [
+  { label: 'Home', id: 'home' },
+  { label: 'Products & Services', id: 'products' },
+  { label: 'About', id: 'about' },
+  { label: 'FAQ', id: 'faq' },
+  { label: 'Contact', id: 'contact' },
+];
 
 class Navbar extends Component {
   state = {
@@ -33,21 +39,21 @@ class Navbar extends Component {
   };
 
   getNavAnchorLink = item => (
-    <AnchorLink style={{color:'white'}} href={`#${item.toLowerCase()}`} onClick={this.closeMobileMenu}>
-      {item}
+    <AnchorLink href={`#${item.id}`} onClick={this.closeMobileMenu}>
+      {item.label}
     </AnchorLink>
   );
 
   getNavList = ({ mobile = false }) => (
     <NavListWrapper  mobile={mobile}>
       <Scrollspy
-        items={NAV_ITEMS.map(item => item.toLowerCase())}
+        items={NAV_ITEMS.map(item => item.id)}
         currentClassName="active"
         mobile={mobile}
         offset={-64}
       >
         {NAV_ITEMS.map(navItem => (
-          <NavItem  style={{color:'white'}}key={navItem}>{this.getNavAnchorLink(navItem)}</NavItem>
+          <NavItem key={navItem.id}>{this.getNavAnchorLink(navItem)}</NavItem>
         ))}
       </Scrollspy>
     </NavListWrapper>
@@ -59,9 +65,16 @@ class Navbar extends Component {
     return (
       <Nav {...this.props}>
         <StyledContainer>
-          <Brand style={{color:'white'}}>Dynamic Chemicals</Brand>
+          <AnchorLink href="#home" onClick={this.closeMobileMenu}>
+            <Brand>Dynamic Chemicals</Brand>
+          </AnchorLink>
           <Mobile>
-            <button onClick={this.toggleMobileMenu} style={{ color: 'white' }}>
+            <button
+              aria-expanded={mobileMenuOpen}
+              aria-label="Toggle navigation"
+              onClick={this.toggleMobileMenu}
+              style={{ color: 'white' }}
+            >
               <MenuIcon />
             </button>
           </Mobile>

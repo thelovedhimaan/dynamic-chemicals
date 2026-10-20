@@ -1,9 +1,9 @@
 {
   "name": "dynamic-chemicals",
   "private": true,
-  "description": "An absurd starter for Gatsby",
+  "description": "Product catalogue and enquiry website for Dynamic Chemicals",
   "version": "0.1.0",
-  "author": "Ajay NS <ajay.ns@outlook.com>",
+  "author": "Dynamic Chemicals",
   "dependencies": {
     "@svgr/webpack": "^4.1.0",
     "gatsby": "^2.0.76",
@@ -36,7 +36,7 @@
     "dev": "gatsby develop",
     "start": "npm run dev",
     "format": "prettier --write \"src/**/*.js\"",
-    "clean": "rm -rf .cache && rm -rf public"
+    "clean": "gatsby clean"
   },
   "devDependencies": {
     "prettier": "^1.15.2"
