@@ -5,7 +5,8 @@ const nextConfig: NextConfig = {
   poweredByHeader: false,
   typedRoutes: true,
   async rewrites() {
-    return [{ source: "/api/:path*", destination: `${process.env.API_URL || "http://localhost:4000"}/api/:path*` }];
+    const apiUrl = process.env.API_URL || (process.env.NODE_ENV === "development" ? "http://localhost:4000" : "");
+    return apiUrl ? [{ source: "/api/:path*", destination: `${apiUrl}/api/:path*` }] : [];
   },
 };
 

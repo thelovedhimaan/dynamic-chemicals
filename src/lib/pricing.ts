@@ -3,7 +3,7 @@ import path from "path";
 import { products } from "./products";
 
 export type ProductPrice = { productId: string; amount: number | null; unit: string; updatedAt: string };
-const localFile = path.join(process.cwd(), ".data", "prices.json");
+const localFile = process.env.VERCEL ? path.join("/tmp", "dynamic-chemicals", "prices.json") : path.join(process.cwd(), ".data", "prices.json");
 const hasSupabase = Boolean(process.env.SUPABASE_URL && process.env.SUPABASE_SERVICE_ROLE_KEY);
 
 function defaults(): ProductPrice[] { return products.map((product) => ({ productId: product.id, amount: null, unit: "per pack", updatedAt: new Date(0).toISOString() })); }

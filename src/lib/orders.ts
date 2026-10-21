@@ -2,7 +2,7 @@ import { promises as fs } from "fs";
 import path from "path";
 import type { CreateOrderInput, Order, OrderImage, OrderStatus } from "./types";
 
-const localFile = path.join(process.cwd(), ".data", "orders.json");
+const localFile = process.env.VERCEL ? path.join("/tmp", "dynamic-chemicals", "orders.json") : path.join(process.cwd(), ".data", "orders.json");
 const hasSupabase = Boolean(process.env.SUPABASE_URL && process.env.SUPABASE_SERVICE_ROLE_KEY);
 
 function headers(extra: HeadersInit = {}) {

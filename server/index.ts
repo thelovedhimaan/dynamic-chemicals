@@ -87,7 +87,9 @@ app.use((error: Error, _request: Request, response: Response, _next: NextFunctio
   response.status(500).json({ error: "The service could not complete that request." });
 });
 
-app.listen(port, () => console.log(`Dynamic Chemicals API listening on http://localhost:${port}`));
+if (!process.env.VERCEL) app.listen(port, () => console.log(`Dynamic Chemicals API listening on http://localhost:${port}`));
+
+export default app;
 
 function maskEmail(email: string) { const [name, domain = ""] = email.split("@"); return `${name.slice(0, 2)}***@${domain}`; }
 function maskPhone(phone: string) { return `${phone.slice(0, 3)}*****${phone.slice(-3)}`; }
