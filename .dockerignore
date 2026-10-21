@@ -1,0 +1,9 @@
+.git
+.github
+.next
+.data
+.test-dist
+dist-server
+node_modules
+npm-debug.log
+.env*

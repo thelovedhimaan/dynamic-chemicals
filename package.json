@@ -1,44 +1,44 @@
 {
   "name": "dynamic-chemicals",
+  "version": "2.0.0",
   "private": true,
-  "description": "Product catalogue and enquiry website for Dynamic Chemicals",
-  "version": "0.1.0",
-  "author": "Dynamic Chemicals",
-  "dependencies": {
-    "@svgr/webpack": "^4.1.0",
-    "gatsby": "^2.0.76",
-    "gatsby-image": "^2.0.20",
-    "gatsby-plugin-alias-imports": "^1.0.5",
-    "gatsby-plugin-google-fonts": "^0.0.4",
-    "gatsby-plugin-manifest": "^2.0.9",
-    "gatsby-plugin-offline": "^2.0.16",
-    "gatsby-plugin-react-helmet": "^3.0.2",
-    "gatsby-plugin-sharp": "^2.6.11",
-    "gatsby-plugin-styled-components": "^3.0.7",
-    "gatsby-plugin-svgr": "^2.0.1",
-    "gatsby-source-filesystem": "^2.0.8",
-    "gatsby-transformer-sharp": "^2.1.8",
-    "prop-types": "^15.6.2",
-    "react": "^16.6.3",
-    "react-anchor-link-smooth-scroll": "^1.0.11",
-    "react-collapsible": "^2.6.0",
-    "react-dom": "^16.6.3",
-    "react-helmet": "^5.2.0",
-    "react-scrollspy": "^3.3.5",
-    "styled-components": "^4.1.3"
-  },
-  "keywords": [
-    "gatsby"
-  ],
-  "license": "MIT",
+  "description": "Dynamic Chemicals product catalogue and order tracking platform",
   "scripts": {
-    "build": "gatsby build",
-    "dev": "gatsby develop",
-    "start": "npm run dev",
-    "format": "prettier --write \"src/**/*.js\"",
-    "clean": "gatsby clean"
+    "dev": "concurrently -n web,api -c green,cyan \"next dev\" \"tsx watch server/index.ts\"",
+    "dev:web": "next dev",
+    "dev:api": "tsx watch server/index.ts",
+    "build": "npm run build:web && npm run build:api",
+    "build:web": "next build",
+    "build:api": "tsc -p server/tsconfig.json",
+    "start": "concurrently -n web,api \"next start\" \"node dist-server/server/index.js\"",
+    "start:web": "next start",
+    "start:api": "node dist-server/server/index.js",
+    "check": "tsc --noEmit && tsc -p server/tsconfig.json --noEmit && npm test",
+    "test": "tsc -p tsconfig.test.json && node --test .test-dist/src/lib/validation.test.js"
+  },
+  "dependencies": {
+    "cookie-parser": "^1.4.7",
+    "cors": "^2.8.5",
+    "express": "^5.1.0",
+    "helmet": "^8.1.0",
+    "jsonwebtoken": "^9.0.2",
+    "next": "^16.0.10",
+    "react": "^19.2.4",
+    "react-dom": "^19.2.3"
   },
   "devDependencies": {
-    "prettier": "^1.15.2"
+    "@types/node": "^20.17.30",
+    "@types/cookie-parser": "^1.4.9",
+    "@types/cors": "^2.8.19",
+    "@types/express": "^5.0.3",
+    "@types/jsonwebtoken": "^9.0.10",
+    "@types/react": "^19.2.4",
+    "@types/react-dom": "^19.2.3",
+    "concurrently": "^9.2.1",
+    "tsx": "^4.20.6",
+    "typescript": "^5.9.3"
+  },
+  "engines": {
+    "node": ">=20.9.0"
   }
 }
