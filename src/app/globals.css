@@ -199,6 +199,17 @@ button:focus-visible, a:focus-visible, input:focus-visible, textarea:focus-visib
 .boiler-points strong { display: block; margin-bottom: .25rem; color: var(--ink); font-size: .92rem; }
 .footer-partner { max-width: 40rem; margin: 1rem 0 0; color: rgba(255,255,255,.58); line-height: 1.6; }
 
+/* Technical leadership */
+.chemist-section { display: grid; grid-template-columns: minmax(20rem, .9fr) minmax(0, 1.1fr); gap: clamp(2rem, 6vw, 6rem); align-items: center; background: #fff; }
+.chemist-photo { position: relative; min-height: 30rem; overflow: hidden; border-radius: 1.5rem; box-shadow: 0 25px 65px rgba(8,47,102,.16); }
+.chemist-photo::after { content: ""; position: absolute; inset: 55% 0 0; background: linear-gradient(transparent, rgba(4,25,55,.82)); }
+.chemist-photo img { width: 100%; height: 30rem; object-fit: cover; }
+.chemist-photo span { position: absolute; z-index: 1; right: 1.2rem; bottom: 1.2rem; left: 1.2rem; color: #fff; font-size: .72rem; font-weight: 900; letter-spacing: .13em; text-transform: uppercase; }
+.chemist-copy h2 { max-width: 45rem; margin: .8rem 0 1.2rem; font-size: clamp(2.2rem, 4.4vw, 4.4rem); line-height: .96; }
+.chemist-copy > p { max-width: 42rem; color: var(--muted); font-size: 1rem; line-height: 1.7; }
+.chemist-points { display: flex; flex-wrap: wrap; gap: .5rem; margin: 1.5rem 0; }
+.chemist-points span { padding: .55rem .75rem; border: 1px solid #c9ddf4; border-radius: 2rem; color: #174675; background: #edf6ff; font-size: .72rem; font-weight: 800; }
+
 @media (max-width: 1050px) {
   .hero-industry { width: min(42rem, 100%); margin: 2rem auto 0; }
   .plant-grid { grid-template-columns: repeat(3, 1fr); }
@@ -208,6 +219,7 @@ button:focus-visible, a:focus-visible, input:focus-visible, textarea:focus-visib
   .plant-grid { grid-template-columns: repeat(2, 1fr); }
   .plant-heading, .brochure-panel { align-items: flex-start; flex-direction: column; }
   .boiler-note { grid-template-columns: 1fr; }
+  .chemist-section { grid-template-columns: 1fr; }
 }
 @media (max-width: 540px) {
   .hero-industry, .hero-industry > img { min-height: 24rem; height: 24rem; }
@@ -216,4 +228,5 @@ button:focus-visible, a:focus-visible, input:focus-visible, textarea:focus-visib
   .plant-grid { grid-template-columns: 1fr; }
   .plant-card img { height: 14rem; }
   .brochure-actions { width: 100%; flex-direction: column; }
+  .chemist-photo, .chemist-photo img { min-height: 22rem; height: 22rem; }
 }
