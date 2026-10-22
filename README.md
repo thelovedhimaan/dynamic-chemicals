@@ -79,10 +79,11 @@ The current deployment is available at [dynamicchemicals.vercel.app](https://dyn
 
 1. Provision a free Supabase or Neon database through Vercel Marketplace and apply the supplied schema. Database setup is currently skipped because the Marketplace integration requires account-level terms acceptance.
 2. Add the database connection credentials to the Vercel project.
-3. Create and approve the Meta WhatsApp template named by `WHATSAPP_STATUS_TEMPLATE` with customer name, order ID, status, and tracking URL parameters.
-4. Verify the sending domain in Resend and set `ORDER_FROM_EMAIL`.
-5. Add an OpenAI API key to enable generative support replies. Without it, the safe guided support flow remains active.
-6. Set `NEXT_PUBLIC_SITE_URL` and `CORS_ORIGIN` to the production domain and deploy the combined Next.js and Express project to Vercel.
+3. Create and approve two Meta WhatsApp templates. `WHATSAPP_ORDER_TEMPLATE` receives customer name, order ID, item summary, status, and tracking URL. `WHATSAPP_STATUS_TEMPLATE` receives customer name, order ID, status, and tracking URL.
+4. Set `WHATSAPP_PHONE_NUMBER_ID`, `WHATSAPP_ACCESS_TOKEN`, and the template names in Vercel.
+5. Verify the sending domain in Resend, then set `RESEND_API_KEY`, `ORDER_FROM_EMAIL`, and `ORDER_REPLY_TO`. New requests receive an itemized confirmation; later status changes reuse the same notification service.
+6. Add an OpenAI API key to enable generative support replies. Without it, the safe guided support flow remains active.
+7. Set `NEXT_PUBLIC_SITE_URL` and `CORS_ORIGIN` to the production domain and deploy the combined Next.js and Express project to Vercel.
 
 Never expose `SUPABASE_SERVICE_ROLE_KEY`, `WHATSAPP_ACCESS_TOKEN`, `RESEND_API_KEY`, `OPENAI_API_KEY`, `ADMIN_PASSWORD`, or `SESSION_SECRET` to the browser.
 

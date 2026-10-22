@@ -10,5 +10,5 @@
     "skipLibCheck": true,
     "types": ["node"]
   },
-  "include": ["src/lib/types.ts", "src/lib/validation.ts", "src/lib/validation.test.ts"]
+  "include": ["src/lib/types.ts", "src/lib/validation.ts", "src/lib/validation.test.ts", "src/lib/notifications.ts", "src/lib/notifications.test.ts"]
 }
