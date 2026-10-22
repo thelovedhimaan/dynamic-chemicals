@@ -85,3 +85,23 @@ button:focus-visible, a:focus-visible, input:focus-visible, textarea:focus-visib
 .product-image img { width: 100%; height: 100%; object-fit: cover; filter: none; }
 .product-card:hover .product-image img { transform: scale(1.035); }
 .detail-image img { width: 100%; height: 100%; max-height: none; object-fit: cover; filter: none; }
+
+/* Prominent brand lockup with a tighter opening viewport. */
+.site-header { min-height: 4.75rem; padding-block: .6rem; }
+.brand-mark { width: 3.15rem; border-radius: .9rem; font-size: .86rem; }
+.brand strong { font-size: 1.12rem; }
+.brand small { margin-top: .16rem; font-size: .7rem; }
+.hero { min-height: 39rem; padding-block: clamp(2.5rem, 5vw, 5rem); }
+.hero-brand { display: flex; align-items: center; gap: .9rem; margin-bottom: 1.6rem; }
+.hero-brand-mark { display: grid; place-items: center; width: 3.7rem; aspect-ratio: 1; flex: 0 0 auto; color: var(--green-dark); border: 1px solid rgba(255,255,255,.55); border-radius: 1rem; background: var(--lime); box-shadow: inset 0 1px rgba(255,255,255,.75), 0 14px 35px rgba(0,0,0,.18); font-family: var(--font-display), sans-serif; font-size: 1rem; font-weight: 850; letter-spacing: -.02em; }
+.hero-brand strong, .hero-brand small { display: block; }
+.hero-brand strong { font-family: var(--font-display), sans-serif; font-size: clamp(1.65rem, 2.2vw, 2.35rem); font-weight: 800; letter-spacing: -.045em; line-height: 1; }
+.hero-brand small { margin-top: .35rem; color: rgba(255,255,255,.68); font-size: .78rem; font-weight: 500; }
+
+@media (max-width: 540px) {
+  .site-header { min-height: 4.25rem; padding-block: .5rem; }
+  .brand-mark { width: 2.9rem; }
+  .hero { padding-top: 2.4rem; }
+  .hero-brand { margin-bottom: 1.25rem; }
+  .hero-brand-mark { width: 3.25rem; }
+}
