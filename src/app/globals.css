@@ -193,8 +193,10 @@ button:focus-visible, a:focus-visible, input:focus-visible, textarea:focus-visib
 .brochure-actions { display: flex; flex: 0 0 auto; gap: .6rem; }
 .brochure-order { color: white; border-color: rgba(255,255,255,.3); background: rgba(255,255,255,.08); }
 .boiler-note { display: grid; grid-template-columns: .85fr 1.15fr; gap: clamp(2rem, 6vw, 7rem); align-items: start; background: white; }
-.section-within { margin: 5rem 0 1rem; padding: clamp(2rem, 4vw, 3.5rem); border: 1px solid var(--line); border-radius: 1.3rem; }
+.section-within { display: block; margin: 4rem 0 1rem; padding: clamp(1.6rem, 3vw, 2.5rem); border: 1px solid var(--line); border-radius: 1.3rem; }
 .stacked-heading > p { max-width: 42rem; margin: 1rem 0 0; color: var(--muted); line-height: 1.65; }
+.section-within .boiler-points { grid-template-columns: repeat(3, minmax(0, 1fr)); gap: .75rem; margin-top: 1.5rem; }
+.section-within .boiler-points p { height: 100%; }
 .boiler-note h2 { margin: .7rem 0 0; font-size: clamp(2rem, 4vw, 3.7rem); line-height: 1; }
 .boiler-points { display: grid; gap: .75rem; }
 .boiler-points p { margin: 0; padding: 1rem 1.1rem; border: 1px solid var(--line); border-radius: .9rem; color: var(--muted); font-size: .82rem; line-height: 1.6; background: #f5f9fe; }
@@ -222,6 +224,7 @@ button:focus-visible, a:focus-visible, input:focus-visible, textarea:focus-visib
   .plant-heading, .brochure-panel { align-items: flex-start; flex-direction: column; }
   .boiler-note { grid-template-columns: 1fr; }
   .chemist-section { grid-template-columns: 1fr; }
+  .section-within .boiler-points { grid-template-columns: 1fr; }
 }
 @media (max-width: 540px) {
   .hero-industry, .hero-industry > img { min-height: 24rem; height: 24rem; }
