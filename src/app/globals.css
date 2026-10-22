@@ -171,9 +171,9 @@ button:focus-visible, a:focus-visible, input:focus-visible, textarea:focus-visib
 
 .industrial-solutions { background: #e8f1fb; }
 .treatment-grid { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 1rem; }
-.treatment-card { display: grid; grid-template-columns: minmax(9rem, .72fr) 1.28fr; min-height: 14.5rem; overflow: hidden; border: 1px solid var(--line); border-radius: 1.2rem; background: white; box-shadow: 0 10px 28px rgba(8,47,102,.07); }
+.treatment-card { display: grid; grid-template-columns: minmax(9rem, .72fr) 1.28fr; height: 15rem; overflow: hidden; border: 1px solid var(--line); border-radius: 1.2rem; background: white; box-shadow: 0 10px 28px rgba(8,47,102,.07); }
 .treatment-card > img { width: 100%; height: 100%; object-fit: cover; }
-.treatment-card > div { align-self: end; padding: 1.3rem; }
+.treatment-card > div { align-self: center; padding: 1.3rem; }
 .treatment-card span { color: var(--green); font-size: .7rem; font-weight: 900; letter-spacing: .12em; }
 .treatment-card h3 { margin: .65rem 0; font-size: 1.45rem; }
 .treatment-card p { margin: 0; color: var(--muted); font-size: .8rem; line-height: 1.65; }
@@ -228,7 +228,7 @@ button:focus-visible, a:focus-visible, input:focus-visible, textarea:focus-visib
 }
 @media (max-width: 540px) {
   .hero-industry, .hero-industry > img { min-height: 24rem; height: 24rem; }
-  .treatment-card { grid-template-columns: 1fr; }
+  .treatment-card { grid-template-columns: 1fr; height: auto; }
   .treatment-card > img { height: 14rem; }
   .plant-grid { grid-template-columns: 1fr; }
   .plant-card img { height: 14rem; }
