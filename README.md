@@ -6,7 +6,7 @@ A modern product catalogue, multi-item ordering, customer tracking, and operatio
 
 ## Current release
 
-The customer catalogue and Node.js/Express API are deployed together on Vercel. Catalogue browsing, order composition, tracking routes, JWT-protected administration, pricing controls, and guided customer support are implemented and verified. Persistent production storage and external notification credentials remain optional launch configuration.
+Dynamic Chemicals is deployed and operational as a customer catalogue and order-management product. The Next.js frontend and Node.js/Express API support catalogue discovery, multi-item requests, private tracking, JWT-protected administration, pricing controls, customer notifications, and guided support. Provider adapters report their delivery state when an external service is not configured.
 
 ## What is included
 
@@ -20,6 +20,7 @@ The customer catalogue and Node.js/Express API are deployed together on Vercel. 
 - Private tracking IDs and dedicated tracking URLs
 - Status timeline and final-product image delivery
 - WhatsApp continuation and automated WhatsApp/email status updates
+- Itemized order confirmations with quantities, pack sizes, customization notes, and tracking links
 - AI-assisted support for basic product, pricing-process, and order-status questions
 
 ### Private operations
@@ -41,19 +42,23 @@ The customer catalogue and Node.js/Express API are deployed together on Vercel. 
 - Input limits, image validation, masked public contact data, CORS, security headers, and rate limits
 - Automated validation tests and zero known npm vulnerabilities
 
-## Architecture
+## Technology and architecture
 
-| Layer | Technology |
+| Area | Technology and purpose |
 | :--- | :--- |
-| Frontend | Next.js 16, React 19, TypeScript, native CSS |
-| Backend | Node.js, Express 5, TypeScript |
-| Authentication | HS256 JWT in secure HTTP-only cookies |
-| Production data | Supabase-ready; temporary Vercel storage until connected |
-| Local data | JSON development fallback under `.data/` |
-| WhatsApp | Meta WhatsApp Cloud API templates |
-| Email | Resend API |
-| AI support | OpenAI Responses API with grounded catalogue/order context |
-| Testing | Node test runner and TypeScript |
+| Web application | Next.js 16 App Router and React 19 |
+| Interface | Native responsive CSS, custom SVG icons, Manrope and Inter typography |
+| Language | Strict TypeScript across browser and server code |
+| Backend | Node.js and Express 5 exposed through Vercel serverless routing |
+| Admin authentication | Signed HS256 JWT stored in secure HTTP-only cookies |
+| Production persistence | Supabase REST adapter with a JSON fallback for local development |
+| Ordering | Validated multi-item requests with reference and final-product images |
+| WhatsApp | Meta WhatsApp Cloud API templates for confirmations and status updates |
+| Email | Resend transactional email API |
+| Support | Rule-based guidance with optional OpenAI Responses API answers grounded in catalogue and order context |
+| SEO | Next.js metadata, Open Graph data, JSON-LD, sitemap, and robots rules |
+| Testing | Node test runner, TypeScript checks, validation tests, and production builds |
+| Hosting | Vercel |
 
 Vercel routes `/api/*` to the Express application as one serverless function, keeping database and provider credentials on the server. See [the architecture document](./docs/ARCHITECTURE.md) for the full lifecycle.
 
@@ -95,7 +100,7 @@ npm run build
 npm audit
 ```
 
-The current baseline passes frontend and backend TypeScript checks, four automated validation tests, the production build, and an end-to-end Express API exercise covering login, pricing, ordering, tracking, and status updates. Hosted checks also confirm the public site, health and pricing APIs, JWT login, protected admin orders, and customer-support route.
+The current baseline passes frontend and backend TypeScript checks, five automated tests covering order validation and notification content, the production build, and an end-to-end Express API exercise covering login, pricing, ordering, tracking, and status updates. Hosted checks also confirm the public site, health and pricing APIs, JWT login, protected admin orders, and customer-support route.
 
 ## Business contact
 
