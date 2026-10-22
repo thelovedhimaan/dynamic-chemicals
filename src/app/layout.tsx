@@ -16,5 +16,5 @@ export const metadata: Metadata = {
 };
 
 export default function RootLayout({ children }: Readonly<{ children: React.ReactNode }>) {
-  return <html lang="en"><body className={`${bodyFont.variable} ${displayFont.variable}`}><a className="skip-link" href="#main">Skip to content</a><SiteHeader /><main id="main">{children}</main><SiteFooter /><SupportChat /></body></html>;
+  return <html lang="en"><body className={`${bodyFont.className} ${bodyFont.variable} ${displayFont.variable}`}><a className="skip-link" href="#main">Skip to content</a><SiteHeader /><main id="main">{children}</main><SiteFooter /><SupportChat /></body></html>;
 }
