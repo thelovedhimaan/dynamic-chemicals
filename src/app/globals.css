@@ -171,7 +171,7 @@ button:focus-visible, a:focus-visible, input:focus-visible, textarea:focus-visib
 
 .industrial-solutions { background: #e8f1fb; }
 .treatment-grid { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 1rem; }
-.treatment-card { display: grid; grid-template-columns: minmax(11rem, .85fr) 1.15fr; min-height: 19rem; overflow: hidden; border: 1px solid var(--line); border-radius: 1.2rem; background: white; box-shadow: 0 10px 28px rgba(8,47,102,.07); }
+.treatment-card { display: grid; grid-template-columns: minmax(9rem, .72fr) 1.28fr; min-height: 14.5rem; overflow: hidden; border: 1px solid var(--line); border-radius: 1.2rem; background: white; box-shadow: 0 10px 28px rgba(8,47,102,.07); }
 .treatment-card > img { width: 100%; height: 100%; object-fit: cover; }
 .treatment-card > div { align-self: end; padding: 1.3rem; }
 .treatment-card span { color: var(--green); font-size: .7rem; font-weight: 900; letter-spacing: .12em; }
@@ -202,10 +202,10 @@ button:focus-visible, a:focus-visible, input:focus-visible, textarea:focus-visib
 .footer-partner { max-width: 40rem; margin: 1rem 0 0; color: rgba(255,255,255,.58); line-height: 1.6; }
 
 /* Technical leadership */
-.chemist-section { display: grid; grid-template-columns: minmax(20rem, .9fr) minmax(0, 1.1fr); gap: clamp(2rem, 6vw, 6rem); align-items: center; background: #fff; }
-.chemist-photo { position: relative; min-height: 30rem; overflow: hidden; border-radius: 1.5rem; box-shadow: 0 25px 65px rgba(8,47,102,.16); }
+.chemist-section { display: grid; grid-template-columns: minmax(17rem, .7fr) minmax(0, 1.3fr); gap: clamp(2rem, 5vw, 5rem); align-items: center; padding-block: clamp(3rem, 5vw, 5rem); background: #fff; }
+.chemist-photo { position: relative; min-height: 22rem; overflow: hidden; border-radius: 1.3rem; box-shadow: 0 20px 48px rgba(8,47,102,.14); }
 .chemist-photo::after { content: ""; position: absolute; inset: 55% 0 0; background: linear-gradient(transparent, rgba(4,25,55,.82)); }
-.chemist-photo img { width: 100%; height: 30rem; object-fit: cover; }
+.chemist-photo img { width: 100%; height: 22rem; object-fit: cover; }
 .chemist-photo span { position: absolute; z-index: 1; right: 1.2rem; bottom: 1.2rem; left: 1.2rem; color: #fff; font-size: .72rem; font-weight: 900; letter-spacing: .13em; text-transform: uppercase; }
 .chemist-copy h2 { max-width: 45rem; margin: .8rem 0 1.2rem; font-size: clamp(2.2rem, 4.4vw, 4.4rem); line-height: .96; }
 .chemist-copy > p { max-width: 42rem; color: var(--muted); font-size: 1rem; line-height: 1.7; }
@@ -244,6 +244,11 @@ button:focus-visible, a:focus-visible, input:focus-visible, textarea:focus-visib
 .boiler-note h2 { font-size: clamp(1.8rem, 3.2vw, 3.1rem); line-height: 1.05; }
 .chemist-copy h2 { font-size: clamp(2rem, 3.4vw, 3.35rem); line-height: 1.02; }
 .cta-panel h2, .site-footer h2 { font-size: clamp(1.8rem, 3.2vw, 3.1rem); line-height: 1.05; }
+
+@media (min-width: 1051px) {
+  .section-heading h2, .plant-heading h2, .boiler-note h2, .chemist-copy h2, .brochure-panel h2, .cta-panel h2 { white-space: nowrap; }
+  .section-heading h2, .plant-heading h2, .boiler-note h2, .chemist-copy h2 { font-size: clamp(1.9rem, 2.55vw, 2.8rem); }
+}
 
 @media (max-width: 540px) {
   .site-header .brand-mark { width: 2.55rem; }

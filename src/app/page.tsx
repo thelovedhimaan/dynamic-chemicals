@@ -35,7 +35,7 @@ export default function HomePage() {
     <IndustrialSolutions />
     <section className="chemist-section section">
       <div className="chemist-photo"><img src="/team/main-chemist.webp" alt="Dynamic Chemicals main chemist working in the laboratory" /><span>Technical leadership</span></div>
-      <div className="chemist-copy"><span className="eyebrow">Application-led chemistry</span><h2>Recommendations start with the system, water and operating conditions.</h2><p>Our main chemist reviews treatment goals, site conditions, compatibility and dosing requirements before a product or program is recommended.</p><div className="chemist-points"><span>Water-quality review</span><span>Application suitability</span><span>Treatment guidance</span></div><a className="button secondary" href="/catalog.pdf" target="_blank" rel="noreferrer"><Icon name="download" />View company brochure</a></div>
+      <div className="chemist-copy"><span className="eyebrow">Application-led chemistry</span><h2>Chemistry reviewed for real operating conditions.</h2><p>Our main chemist reviews treatment goals, site conditions, compatibility and dosing requirements before a product or program is recommended.</p><div className="chemist-points"><span>Water-quality review</span><span>Application suitability</span><span>Treatment guidance</span></div></div>
     </section>
     <section className="cta-panel"><div><span className="eyebrow">Have a complex requirement?</span><h2>Share the system, capacity and result you need.</h2><p>We can review water conditions, operating duty, plant capacity, product quantities, packaging and customization before confirming the quote.</p></div><Link className="button light" href="/order">Start an order request</Link></section>
   </>;

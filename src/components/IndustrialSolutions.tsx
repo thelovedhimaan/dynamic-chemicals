@@ -23,7 +23,7 @@ export function IndustrialSolutions() {
       </div>
 
       <div className="plant-heading">
-        <div><span className="eyebrow">Plant and machinery</span><h2>Specified for the site, built for the duty.</h2></div>
+        <div><span className="eyebrow">Plant and machinery</span><h2>Specified for the site and operating duty.</h2></div>
         <p>Capacity, material, controls, water quality and operating conditions are confirmed before quotation.</p>
       </div>
       <div className="plant-grid">
@@ -36,7 +36,7 @@ export function IndustrialSolutions() {
       </div>
 
       <section className="boiler-note section-within">
-        <div className="stacked-heading"><span className="eyebrow">Why water treatment matters</span><h2>Scale reduces heat transfer and raises operating risk.</h2><p>Correct treatment supports efficient heat transfer, protects equipment and helps operators manage water-related risks.</p></div>
+        <div className="stacked-heading"><span className="eyebrow">Why water treatment matters</span><h2>Protect efficiency, equipment and operation.</h2><p>Correct treatment supports efficient heat transfer, protects equipment and helps operators manage water-related risks.</p></div>
         <div className="boiler-points"><p><strong>Fuel efficiency</strong>Scale restricts heat transfer and can increase fuel consumption.</p><p><strong>Equipment protection</strong>Reviewed treatment helps manage scale, sludge, dissolved oxygen and corrosion.</p><p><strong>Safer operation</strong>Water chemistry, cleaning and maintenance should follow site-specific technical review.</p></div>
       </section>
 
