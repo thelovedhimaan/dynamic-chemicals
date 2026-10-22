@@ -12,6 +12,7 @@ export const metadata: Metadata = {
   metadataBase: new URL(process.env.NEXT_PUBLIC_SITE_URL || "http://localhost:3000"),
   title: { default: "Dynamic Chemicals | Industrial and Commercial Chemical Solutions", template: "%s | Dynamic Chemicals" },
   description: "Explore Dynamic Chemicals products, request customized multi-item orders, and track production and delivery online.",
+  icons: { icon: [{ url: "/icon.svg", type: "image/svg+xml" }], shortcut: "/favicon.svg" },
   openGraph: { title: "Dynamic Chemicals", description: "Chemical products and application-led order support.", type: "website" },
 };
 
